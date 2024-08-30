@@ -1,0 +1,31 @@
+<section class="w-full xl:rounded-sm">
+    <img
+        src="/contacto.webp"
+        alt=""
+        class="w-full object-cover max-h-[37rem] min-h-96 xl:rounded-sm"
+    />
+
+    <form
+        action=""
+        class="flex flex-col justify-center items-center my-5 text-2xl"
+    >
+        <div class="w-[98%] md:w-[80%]  flex flex-col">
+            <label>Nombres y Apellidos: </label>
+            <input type="email" required/>
+            <label>Correo Electrónico:</label>
+            <input type="text" required />
+            <label>Número:</label>
+            <input type="text" maxlength={9} required />
+            <label>Comentario:</label>
+            <textarea name="comentarios"></textarea>
+            <button type="submit" class="bg-[#fce7e7] my-2 p-3 rounded-lg"
+                >Enviar</button
+            >
+        </div>
+    </form>
+</section>
+<style>
+    label{
+        padding: 4px;
+    }
+</style>

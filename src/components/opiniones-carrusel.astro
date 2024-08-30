@@ -1,0 +1,46 @@
+---
+// Aquí va la lógica del Body
+import Opiniones from "./opiniones.astro";
+const data =[
+    {id: 1,
+        imagen:"https://i.pinimg.com/564x/ba/e1/02/bae10265b2c0425154abc6238316c25e.jpg",
+        nombre:"Carlos",
+        profesion:"Ingeniero de software",
+        opinion:"Compre un anillo hace 5 años y aún sigue idéntico a cuando lo compre"
+    },
+    {id: 2,
+        imagen:"https://i.pinimg.com/564x/7c/c7/94/7cc7942d37be1c8d16b5e7a33944459b.jpg",
+        nombre:"Veronica Jara",
+        profesion:"Ingeniero de software",
+        
+        opinion:"A mi enamorado le gusto mucho el detalle"
+    },
+    {id: 3,
+        imagen:"https://i.pinimg.com/564x/c6/dd/52/c6dd52922ab0764d3f70d855a15aeeee.jpg",
+        nombre:"Alejandro Moreno",
+        profesion:"Ingeniero de software",
+        opinion:"Una gran atención"
+    },
+    {id: 4,
+        imagen:"https://i.pinimg.com/564x/5d/f7/51/5df75135309a58a41a769b2b119513c5.jpg",
+        nombre:"Julia Mendoza",
+        profesion:"Ingeniero de software",
+        opinion:"La recomiendo, es mi tienda favorita"
+    },
+]
+---
+
+<swiper-container class="" space-between="30"
+slides-per-view="2">
+{data.map((d)=>(
+    <swiper-slide key={d.id}>
+        <Opiniones imagen={d.imagen} nombre={d.nombre} profesion={d.profesion} opinion={d.opinion}/>
+    </swiper-slide>
+))}
+
+
+</swiper-container>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+
